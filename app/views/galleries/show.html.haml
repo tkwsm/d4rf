@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Species name:
+  = @gallery.species_name
+%p
+  %strong Description:
+  = @gallery.description
+%p
+  %strong Version:
+  = @gallery.version
+%p
+  %strong Link:
+  = @gallery.link
+%p
+  %strong Sortnumber:
+  = @gallery.sortnumber
+= link_to 'Edit', edit_gallery_path(@gallery)
+|
+= link_to 'Back', galleries_path

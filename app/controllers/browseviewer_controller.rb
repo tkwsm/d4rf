@@ -1,0 +1,2 @@
+class BrowseviewerController < ApplicationController
+end

@@ -1,0 +1,24 @@
+%p#notice= notice
+%h1 Galleries
+%table
+  %thead
+    %tr
+      %th Species name
+      %th Description
+      %th Version
+      %th Link
+      %th Sortnumber
+      %th{:colspan => "3"}
+  %tbody
+    - @galleries.each do |gallery|
+      %tr
+        %td= gallery.species_name
+        %td= gallery.description
+        %td= gallery.version
+        %td= gallery.link
+        %td= gallery.sortnumber
+        %td= link_to 'Show', gallery
+        %td= link_to 'Edit', edit_gallery_path(gallery)
+        %td= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Gallery', new_gallery_path
